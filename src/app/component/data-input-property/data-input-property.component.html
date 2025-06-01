@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Input Properties Example</h2>
+
+  <div class="controls">
+    <button (click)="updateCounters()">Increment Both Counters</button>
+  </div>
+
+  <app-counter-child
+    [classicCounter]="classicCount"
+    [signalCounter]="signalCount()"
+  ></app-counter-child>
+  <button routerLink="/" class="back-button">Vissza a főoldalra</button>
+</div>
