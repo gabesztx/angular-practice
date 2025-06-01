@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Output Properties Example</h2>
+
+  <div class="counters">
+    <div class="counter-box">
+      <h3>Classic Output Counter</h3>
+      <p>Value received from child: {{ classicCountFromChild }}</p>
+    </div>
+
+    <div class="counter-box">
+      <h3>Signal output() Counter</h3>
+      <p>Value received from child: {{ signalCountFromChild }}</p>
+    </div>
+  </div>
+
+  <app-output-counter-child
+    (classicCounterChange)="onClassicCounterChange($event)"
+    (signalCounterChange)="onSignalCounterChange($event)"
+  ></app-output-counter-child>
+
+  <button routerLink="/" class="back-button">Vissza a főoldalra</button>
+</div>

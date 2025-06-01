@@ -1,0 +1,36 @@
+.child-container {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.counter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.counter-box {
+  flex: 1;
+  min-width: 250px;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: white;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button:hover {
+  background-color: #3367d6;
+}

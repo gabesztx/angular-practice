@@ -1,26 +1,17 @@
-<h1>Signal</h1>
+<div class="container">
+  <h2>Signals</h2>
 
-<div class="signal-container">
-  <div class="counter-section">
-    <h2>Alap Signal Példa</h2>
-    <p>Aktuális érték: {{ count() }}</p>
-
+  <div class="controls">
     <div class="button-group">
       <button (click)="increment()">Növelés</button>
       <button (click)="decrement()">Csökkentés</button>
       <button (click)="reset()">Reset</button>
+      <button (click)="toggleStatus()">Státusz váltás</button>
     </div>
-
-    <h3>Computed Példa</h3>
+    <p>Aktuális érték: {{ count() }}</p>
     <p>Ez a szám {{ parity() }}.</p>
-
-    <h3>Status Signal Példa</h3>
     <p>Státusz: {{ status() }}</p>
-    <button (click)="toggleStatus()">Státusz váltás</button>
-
-    <h3>Effect Példa</h3>
-    <p>Figyeld a konzolt: minden count vagy status változás logolódik!</p>
   </div>
-</div>
 
-<button routerLink="/" class="back-button">Vissza a főoldalra</button>
+  <button routerLink="/" class="back-button">Vissza a főoldalra</button>
+</div>

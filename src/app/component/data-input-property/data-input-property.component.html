@@ -1,13 +1,24 @@
 <div class="container">
   <h2>Input Properties Example</h2>
 
-  <div class="controls">
-    <button (click)="updateCounters()">Increment Both Counters</button>
+  <div class="counters">
+    <div class="counter-box">
+      <h3>Classic Input Counter</h3>
+      <p>Value sent to child: {{ classicCount }}</p>
+      <button (click)="incrementClassicCounter()">Increment Classic Counter</button>
+    </div>
+
+    <div class="counter-box">
+      <h3>Signal Input Counter</h3>
+      <p>Value sent to child: {{ signalCount() }}</p>
+      <button (click)="incrementSignalCounter()">Increment Signal Counter</button>
+    </div>
   </div>
 
-  <app-counter-child
+  <app-input-counter-child
     [classicCounter]="classicCount"
     [signalCounter]="signalCount()"
-  ></app-counter-child>
+  ></app-input-counter-child>
+
   <button routerLink="/" class="back-button">Vissza a főoldalra</button>
 </div>

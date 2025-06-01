@@ -1,20 +1,23 @@
 import { Component, signal } from '@angular/core';
-import { CounterChildComponent } from './counter-child/counter-child.component';
+import { InputCounterChildComponent } from './input-counter-child/input-counter-child.component';
 import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-data-input-property',
   standalone: true,
-  imports: [CounterChildComponent, RouterLink],
+  imports: [InputCounterChildComponent, RouterLink],
   templateUrl: './data-input-property.component.html',
-  styleUrls: ['./data-input-property.component.scss']
+  styleUrl: './data-input-property.component.scss'
 })
 export class DataInputPropertyComponent {
   classicCount = 0;
   signalCount = signal(0);
 
-  updateCounters() {
+  incrementClassicCounter() {
     this.classicCount++;
+  }
+
+  incrementSignalCounter() {
     this.signalCount.update(count => count + 1);
   }
 }

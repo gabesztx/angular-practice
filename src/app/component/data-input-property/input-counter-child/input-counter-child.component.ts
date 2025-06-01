@@ -1,12 +1,12 @@
 import { Component, Input, input, effect } from '@angular/core';
 
 @Component({
-  selector: 'app-counter-child',
+  selector: 'app-input-counter-child',
   standalone: true,
-  templateUrl: './counter-child.component.html',
-  styleUrls: ['./counter-child.component.scss']
+  templateUrl: './input-counter-child.component.html',
+  styleUrls: ['./input-counter-child.component.scss']
 })
-export class CounterChildComponent {
+export class InputCounterChildComponent {
   @Input() classicCounter = 0;
   signalCounter = input<number>(0);
 
